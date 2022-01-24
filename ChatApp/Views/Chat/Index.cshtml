@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Chat Room</h1>
+</div>
+
+<div class="row rounded-lg overflow-hidden shadow">
+    <div class="col-5 px-0">
+        <div class="bg-white">
+            <div class="bg-gray px-4 py-2 bg-light">
+                <p class="h5 mb-0 py-1">Connections</p>
+            </div>
+            <div class="message-box">
+                <div id="chatUsers" class="list-group rounded-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-7 px-0">
+        <div id="chatRoom" class="px-4 py-5 chat-box bg-white">
+        </div>
+        <div class="input-group position-absolute">
+            <input id="messageInput" type="text" placeholder="Type a message..." class="form-control rounded-0 border-0 py-4 bg-light" />
+            <div class="input-group-append">
+                <button id="sendButton" type="button" class="btn btn-link" value="Send"><i class="fa fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
+
+@*<script src="~/js/signalr/dist/browser/signalr.js" asp-append-version="true"></script>*@
+<script src="https://kit.fontawesome.com/bd6935381e.js" crossorigin="anonymous"></script>
+<script src="~/js/chat.js"></script>
